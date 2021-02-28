@@ -1,0 +1,171 @@
+<html>
+  <!--
+        You have been assigned to the creation of a Smartphone Shop Website.
+        The shop is just a showcase of the products of the shop with some extra informations.
+        No shopping cart / checkout features are required.
+        EX1.:
+        Add H1 title with the name of the shop
+        EX2.: 
+        Add a TABLE with the top 5 products of the shop
+        EX3.: 
+        Each product should have one image, title, description and price
+        EX4.:
+        Add Map to the shop 
+        EX5.: 
+        Add the links to Amazon products for each item in the table
+        EX6.:
+        Add a footer with the address and the name of the shop
+        EX7.: 
+        Add a message board where the user can type a message in it (only client side)
+        // EXTRA                
+        EX8.: 
+        Write a function to change the heading text
+        EX9.:
+        Write a function to change the page background color
+        EX10.:
+        Write a function to change the footer address with a fake one
+    -->
+
+  <head>
+    <style>
+      table {
+        width: 30%;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+      }
+      footer {
+        text-align: left;
+        padding: 3px;
+        background-color: Coral;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="Header">SMART SHOP</h1>
+    <h2>TOP SELLERS</h2>
+
+    <table>
+      <tr>
+        <th></th>
+        <th>Model</th>
+        <th>Price</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a
+            href="https://www.amazon.it/Apple-iPhone-6s-128GB-Rosa/dp/B00QN9UU7A/ref=sr_1_7?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=iphone+6&qid=1601901486&sr=8-7"
+            >iPhone 6</a
+          >
+        </td>
+        <td>50€</td>
+        <td>I'm just an overpriced phone</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href="https://www.amazon.it/dp/B01LVXZRG9/ref=it_a_phone7_1"
+            >iPhone 7</a
+          >
+        </td>
+        <td>100€</td>
+        <td>I'm just an overpriced phone</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href="https://www.amazon.it/dp/B075RB59JP/ref=it_a_phone7_1"
+            >iPhone 8</a
+          >
+        </td>
+        <td>200€</td>
+        <td>I'm just an overpriced phone</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href="https://www.amazon.it/dp/B075R9SDZ9/ref=it_a_phonex_3"
+            >iPhone X</a
+          >
+        </td>
+        <td>300€</td>
+        <td>I'm just an overpriced phone</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href="https://www.amazon.it/dp/B07XS47PVF/ref=it_a_phonex_4"
+            >iPhone 11</a
+          >
+        </td>
+        <td>400€</td>
+        <td>I'm just an overpriced phone</td>
+      </tr>
+    </table>
+
+    <h2>Come Visit Us!</h2>
+    <div id="googleMap" style="width: 100%; height: 400px">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.354040295304!2d-0.30249398402816763!3d51.506720418573586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760df3d4a73bf3%3A0xd9298f456c8a3481!2s45%20Warwick%20Rd%2C%20Ealing%2C%20London%20W5%205PZ%2C%20Regno%20Unito!5e0!3m2!1sit!2sit!4v1601904983673!5m2!1sit!2sit"
+        width="600"
+        height="450"
+        frameborder="0"
+        style="border: 0"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
+    </div>
+
+    <div style="width: 50%; height: 100px"></div>
+    <h2>We are always open to new ideas!</h2>
+    <textarea id="w3review" name="w3review" rows="4" cols="50">
+Tell us what we should improve in our website!</textarea
+    >
+  </body>
+  <footer>
+    <p>SMART SHOP</p>
+    <p1 id="Address">Warwick Road 45, London, E15 4JZ</p1>
+  </footer>
+  <script>
+    document.getElementById("Header").addEventListener("mouseover", mouseOver);
+    document.getElementById("Header").addEventListener("mouseout", mouseOut);
+
+    window.onload = function () {
+      console.log("Pagina caricata all'interno di window.onload");
+      alert("Hello! I am an alert box!!");
+    };
+
+    // Exercise 2
+    const changeTitle = function (newTitle) {
+      document.title = newTitle;
+    };
+    // Exercise 3
+    function mouseOver() {
+      document.getElementById("Header").style.color = "red";
+    }
+    // Exercise 3b
+    function mouseOut() {
+      document.getElementById("Header").style.color = "black";
+    }
+
+    //Header Change Script
+    document.getElementById("Header").innerHTML = "SMART SHOP!";
+    //Footer Fake Address
+    document.getElementById("Address").innerHTML =
+      "Somewhere Randomly in the world ";
+    //Background ColorChange
+    //document.body.style.backgroundColor = "red";
+  </script>
+</html>
