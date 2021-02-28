@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Accessing Elements in the DOM</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+        color: #333;
+      }
+      body {
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      #inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      #button {
+        text-align: center;
+      }
+      div,
+      article {
+        padding: 10px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 onclick="clickme()">CLICK ME</h1>
+    <div id="inputs">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" onchange="logCharsAtChange(event)" />
+      </div>
+      <div>
+        <label for="surname">Surname</label>
+        <input id="surname" type="text" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" />
+      </div>
+      <div>
+        <input type="button" id="saveButton" value="SAVE DATA" />
+      </div>
+      <div id="userValues"></div>
+    </div>
+    <script>
+      function saveData() {
+        let nameInput = document.querySelector('#name')
+        let surnameInput = document.querySelector('#surname')
+        let emailInput = document.querySelector('#email')
+
+        console.log('Your name is', nameInput.value)
+        console.log('Your surname is', surnameInput.value)
+        console.log('Your email is', emailInput.value)
+
+        createParagraph(nameInput.value, surnameInput.value, emailInput.value)
+
+        nameInput.value = ''
+        surnameInput.value = ''
+        emailInput.value = ''
+      }
+
+      function createParagraph(name, surname, email) {
+        let newParagraph = document.createElement('p')
+        newParagraph.innerText = name + ' ' + surname + ' ' + email
+        newParagraph.style.color = 'red'
+        newParagraph.style.fontSize = 24
+        document.querySelector('body').appendChild(newParagraph)
+      }
+
+      function logCharsAtChange(e) {
+        console.log(e)
+      }
+
+      window.onload = function () {
+        // automatically triggered
+        console.log('page has successfully loaded')
+        let button = document.querySelector('#saveButton')
+        if (true) {
+          button.onclick = saveData
+        }
+      }
+
+      function clickme() {
+        alert('hello')
+      }
+    </script>
+  </body>
+</html>
