@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+        BINGO CHALLENGE!!!
+        Create programmatically (with JS) a BINGO board with 76 cells, from 1 to 76.
+        Create a button to randomize a number from 1 to 76. The same number should be highlighted on the bingo board
+        EXTRA: 
+        - Take ALWAYS a new number (avoid randoming 10 3 times for example)
+        - Create a USER BOARD with random 24 numbers that highlights as the main board does
+        - Let the user choose HOW MANY user boards he's willing to play with and create them.
+    -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BINGOnna Kill Myself</title>
+    <style>
+      body {
+        background-color: #f8f8f8;
+        color: #000000;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 18px;
+        max-width: 660px;
+      }
+      header {
+        display: flex;
+        align-items: flex-start;
+        min-width: 768px;
+        height: 120px;
+        margin-top: 60px;
+      }
+      h1 {
+        font-size: 80px;
+        margin: 10px 0px;
+      }
+
+      h3 {
+        margin: 10px 0px 0px 0px;
+      }
+      #randomNumber {
+        background-color: #000000;
+        border-radius: 100px;
+        color: #fff;
+        padding: 10px;
+        margin-left: 50px;
+        margin-top: 25px;
+        width: 100px;
+        text-align: center;
+      }
+
+      #randomNumber h2 {
+        font-size: 48px;
+        position: relative;
+        margin: 0;
+      }
+
+      #board {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+
+      .numberCell {
+        display: inline-block;
+        color: rgb(255, 255, 255);
+        background-color: #000000;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        border: 1px solid transparent;
+        transition: all 0.15s ease;
+        box-sizing: border-box;
+        cursor: pointer;
+        border-radius: 30px;
+        margin: 5px 5px;
+      }
+
+      .selected {
+        background-color: #00000000;
+      }
+
+      #randomiseButton {
+        width: 180px;
+        color: #fff;
+
+        border: none;
+        background-color: #000000;
+        padding: 20px;
+        border-radius: 40px;
+        font-weight: bold;
+      }
+
+      .highlight {
+        background-color: #00c26b;
+        display: inline-block;
+        color: #fff;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        border-radius: 30px;
+        margin: 5px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Beeengow</h1>
+      <div id="randomNumber">
+        <h2>??</h2>
+      </div>
+    </header>
+    <div id="board"></div>
+    <input
+      id="randomiseButton"
+      type="button"
+      value="Randomise Number"
+      onclick="randomiseNumber()"
+    />
+
+    <script>
+      window.onload = function () {
+        for (let i = 1; i <= 76; i++) {
+          const board = document.querySelector("#board");
+          const numberCell = document.createElement("div");
+          numberCell.className = "numberCell";
+
+          const numberContent = document.createElement("h3");
+          numberContent.innerText = i;
+
+          numberCell.appendChild(numberContent);
+          board.appendChild(numberCell);
+        }
+      };
+
+      function randomiseNumber() {
+        let randomNumber = Math.round(Math.random() * 76);
+        let numberArray = document.querySelectorAll(".numberCell");
+        let highlight = document.querySelectorAll(".highlight");
+        if (numberArray[randomNumber - 1].classList.contains("highlight")) {
+          console.log("duplicate number detected");
+          while (
+            numberArray[randomNumber - 1].classList.contains("highlight")
+          ) {
+            console.log(randomNumber);
+            randomNumber = Math.round(Math.random() * 76);
+            console.log("Rerolled to: " + randomNumber);
+          }
+        }
+        const numberHolder = document.querySelector("#randomNumber h2");
+        numberHolder.innerText = randomNumber;
+        numberArray[parseInt(randomNumber) - 1].classList.add("highlight");
+      }
+    </script>
+  </body>
+</html>
