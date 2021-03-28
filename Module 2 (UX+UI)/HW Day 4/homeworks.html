@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+    WELCOME TO THE STRIVE TEAM GENERATOR!
+    The app is pretty straight forward, use Bootstrap to add the following features:
+    - [EXTRA] Create a button to remove an user from a team, putting him back in the main list
+    - [EXTRA] Create a button to reset the state of the app
+-->
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="application/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <label for="nameInput">Insert name here</label>
+      <input type="text" id="nameInput" />
+      <input
+        type="button"
+        id="insertName"
+        class="btn-primary"
+        value="Insert"
+        onclick="insertName()"
+      />
+      <ul id="namesContainer" class="namesContainer"></ul>
+      <input
+        type="button"
+        id="assign"
+        class="btn-danger"
+        value="Assign"
+        onclick="assign()"
+        disabled
+      />
+      <br />
+      <label for="teamNumber">Choose number of teams</label>
+      <input type="number" id="teamNumber" />
+      <input
+        type="button"
+        id="setTeamsNumbers"
+        class="btn-primary"
+        value="Set Teams"
+        onclick="setTeams()"
+      />
+      <div class="row" id="teamsContainer"></div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function insertName() {
+        if (document.getElementById("nameInput").value == "") {
+          return;
+        }
+        let name = document.getElementById("nameInput").value;
+        document.getElementById("nameInput").value = "";
+        let li = document.createElement("li");
+        let liContent = document.createTextNode(name);
+        li.appendChild(liContent);
+        document.getElementById("namesContainer").appendChild(li);
+      }
+
+      function setTeams() {
+        let numberOfTeams = parseInt(
+          document.getElementById("teamNumber").value
+        );
+        if (numberOfTeams > 12) {
+          return;
+        }
+        document.getElementById("setTeamsNumbers").disabled = true;
+        document.getElementById("teamNumber").disabled = true;
+        for (let i = 0; i < numberOfTeams; i++) {
+          let col = document.createElement("div");
+          col.classList.add("col-1");
+          col.appendChild(document.createTextNode("Team " + i));
+          document.getElementById("teamsContainer").appendChild(col);
+        }
+        document.getElementById("assign").disabled = false;
+      }
+      function assign() {
+        let namesContainer = document.getElementById("namesContainer");
+        let allNames = namesContainer.childNodes;
+        let randomLiElement =
+          allNames[Math.floor(Math.random() * allNames.length)];
+        let randomName = randomLiElement.textContent;
+        namesContainer.removeChild(randomLiElement);
+        let allColumns = document.querySelectorAll(".col-1");
+        let div = document.createElement("div");
+        div.appendChild(document.createTextNode(randomName));
+        allColumns[Math.floor(Math.random() * allColumns.length)].appendChild(
+          div
+        );
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+* {
+    padding: 1%;
+    transition: all 0.8s ease;
+  }
+  .navbar {
+    margin: -2.1%;
+  }
+  .bd-example {
+    width: 800px;
+  }
+  .container {
+    background-color: rgba(73, 70, 70, 0.253);
+    display: flex;
+    justify-content: center;
+    transition: all 0.8s ease;
+  }
+  .container:hover {
+    background-color: rgba(37, 36, 36, 0.747);
+    color: white;
+    border-radius: 20px;
+  }
+  body {
+    background-image: linear-gradient(12deg, #4d2f7e, #6b2a11, #71721a);
+  }
+  .bg-dark {
+    background-color: #343a4070 !important;
+  }
+  .nav-item {
+    transition: all 0.25s ease;
+    color: #575b5f34;
+  }
+  .nav-item:hover {
+    color: whitesmoke;
+  }
+  .jumbotron {
+    margin-top: 1%;
+    background-color: rgba(65, 62, 62, 0.432);
+    border-radius: 15px;
+  }
+  .jumbotron:hover {
+    border-radius: 33px;
+  }
+  .btn {
+    border: none;
+  }
+  .btn-primary {
+    transition: all 0.6s ease;
+    background-color: rgba(230, 57, 57, 0.233);
+    margin-top: 5%;
+  }
+  .btn-primary:hover {
+    background-color: rgba(216, 35, 66, 0.979);
+    border-radius: 15px;
+    border: none;
+  }
+  .card-body {
+    background-color: rgba(212, 201, 201, 0.815);
+    border-radius: 0px;
+    transition: all 0.25s ease;
+  }
+  .card-body:hover {
+    border: none;
+    background-color: rgba(83, 75, 75, 0);
+    border-radius: 25px;
+  }
+  .row {
+    background-color: rgba(88, 85, 85, 0.384);
+    border-radius: 15px;
+  }
+  .row:hover {
+    border-radius: 33px;
+  }
+  .img-fluid {
+    width: auto;
+    opacity: 50%;
+    border-radius: 15px;
+  }
+  .img-fluid:hover {
+    width: auto;
+    opacity: 100%;
+    border-radius: 33px;
+  }
+  
+  .rich {
+    width: 15vh;
+    height: 15vh;
+  }
+  .davide {
+    margin-left: 5vh;
+    width: 15vh;
+    height: 15vh;
+  }
+  .luca {
+    width: 15vh;
+    height: 15vh;
+  }
+  #testimonial {
+    margin: auto;
+  }
+  .backgroundhehe {
+    background-image: url(https://tr-images.condecdn.net/image/l6KW3XVmmgL/crop/3000);
+    background-size: cover;
+    color: white;
+    margin-top: 3%;
+    border-radius: 23px;
+  }
+  .backgroundDOF {
+    background-image: url(https://tr-images.condecdn.net/image/jWJRq0JoXK5/crop/3000);
+    background-size: cover;
+    color: white;
+    border-radius: 23px;
+  }
+  .background123 {
+    background-image: url(https://i.pinimg.com/originals/87/ee/40/87ee4089a6172dc676957129678797aa.jpg);
+    background-size: cover;
+    color: white;
+    border-radius: 23px;
+  }
+  .background1234 {
+    background-image: url(https://miro.medium.com/max/6000/1*n5kqoOwtPAFaRqrVZH9ckQ.jpeg);
+    background-size: cover;
+    color: white;
+    border-radius: 23px;
+  }
+  .background1235 {
+    background-image: url(https://mocah.org/uploads/posts/5413501-branch-sunlight-sun-ray-dark-light-shadow-californium-ray-sun-yosemite-free-images.jpg);
+    background-size: cover;
+    color: white;
+    border-radius: 23px;
+  }
+  .background1236 {
+    background-image: url(https://mocah.org/uploads/posts/5347429-silhouette-jump-leap-person-sky-sunset-sunrise-yellow-orange-blue-black-man-feet-head-hand-wonderlust-exciting-travelling-hiking-lions-head-free-pictures.jpg);
+    background-size: cover;
+    color: white;
+    border-radius: 23px;
+  }
+  .infos {
+      background-color: #4d2f7e;
+  }

@@ -1,0 +1,9 @@
+.namesContainer{
+    min-height: 300px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+ul{
+    list-style-type: none;
+    padding-inline-start: 0;
+}

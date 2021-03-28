@@ -1,0 +1,149 @@
+body {
+    background-color: #D6D6D6;
+}
+.navbar {
+    height:55px;
+    background-color: rgba(26,26,26,0.9) !important;
+    
+}
+.nav-item {
+    font-size: 14px ;
+    font-weight: 600;
+}
+
+a[href="in"]{
+    color:#cd8fd4 !important;
+}
+a[href="titlewhite"]{
+    color:#d6d6d6 !important;
+}
+
+.highlight {
+   padding-top: 1em;
+   margin-bottom: -0.2em;
+}
+
+.hightitle{
+   font-weight: 600;
+}
+
+.btn-add-to-cart {
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  position: absolute;
+  right: -9rem;
+  bottom: 0;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  background-color: #bde94f;
+  background-image: linear-gradient(180deg, #bde94f 0%, #82b12b 100%);
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-add-to-cart:hover {
+  background-color: #caf957;
+  background-image: linear-gradient(180deg, #caf957 0%, #8bbd2f 100%);
+  color: #fff;
+}
+
+#offers{
+    background-color: #D6D6D6 !important;
+    margin-bottom: -1em;
+}
+
+#quad-cards{
+  margin-top: 1em;
+}
+.card {
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0px !important;
+  border: none !important;
+  background-color: rgba(250, 250, 250, 0.6);
+}
+
+.card-body {
+  padding: 0.5rem 1.2rem;
+}
+
+.card .sale-txt {
+  background-color: #78387b;
+  padding: 4px 8px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.card .sub-text-price {
+  font-size: 18px;
+}
+
+.card .previous-price {
+  text-decoration: line-through;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 13px;
+  color: rgb(179, 179, 179) !important;
+}
+
+.card .icons {
+  color: rgb(184, 184, 184);
+  position: absolute;
+  bottom: 6px;
+  left: 12px;
+}
+
+.card .icons i {
+  height: 16px;
+  width: 16px;
+}
+
+#drm-free {
+  width: 100%;
+  
+}
+
+#drm-free a {
+  color: rgb(64, 64, 64);
+  text-decoration: none;
+}
+
+#promo-banner .promo-banner-wrapper {
+    position: relative;
+  }
+  
+  #promo-banner .text-wrapper {
+    position: absolute;
+    left: 24px;
+  }
+  
+  #promo-banner .text-wrapper h3 {
+    font-size: 24px;
+  }
+  
+  #promo-banner .text-wrapper h5 {
+    font-size: 16px;
+  }
+  
+  #promo-banner .btn-promo {
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 2px;
+    background-color: transparent;
+    position: absolute;
+    right: 24px;
+    height: 46px;
+    min-width: 169px;
+  }
+  
+  #promo-banner .btn-promo:hover {
+    box-shadow: 0 1px 3px 0 hsla(0, 0%, 100%, 0.3),
+      0 0 40px 0 rgba(159, 191, 0, 0.5);
+    border: 1px solid #8ebd00;
+    border-radius: 3px;
+    min-height: 46px;
+    background: linear-gradient(-180deg, #bfe600, #8ebd00);
+    color: #fff;
+  }
+

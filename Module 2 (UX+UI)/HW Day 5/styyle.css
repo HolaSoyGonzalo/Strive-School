@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #141414;
+  color: rgb(235, 230, 230);
+}
+
+
+
+.form-control {
+  background-color: rgb(218, 216, 216);
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: rgb(218, 216, 216);
+
+
+}
+
+textarea {
+  background-color: rgb(235, 232, 232);
+
+}
+
+.dashboard-panel {
+  background-color:
+    #6c757d;
+  border-bottom: 2px solid;
+  padding: 20px;
+  color: #141414;
+  width: 400px;
+  border-radius: 10px;
+  ;
+}
+
+div#main.container {
+  margin-top: 50px;
+  width: 700px;
+}
+
+.sect1,
+.sect2,
+.sect3 {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.sect2,
+.sect3 {
+  border-top: 1px solid rgb(58, 54, 54);
+}
+
+h1 {
+  border-bottom: 1px solid rgb(58, 54, 54);
+}
+
+h6 {
+  background-color: rgb(31, 30, 30);
+  padding: 5px;
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.section-3 {
+  border-top: 1px solid rgb(58, 54, 54);
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+button {
+  background-color: #616161;
+  border: 1px solid rgb(58, 54, 54);
+  color: rgb(58, 54, 54);
+  font-weight: 700;
+}
+
+
+.second {
+  padding: 5px;
+  width: 200px;
+  margin-right: 35px;
+  margin-left: 0;
+}
+
+
+
+.first:hover,
+.second:hover,
+.third:hover {
+  background-color: blanchedalmond;
+  color: black;
+}
+
+
+
+
+
+
+.lab input:checked~.checkmark {
+  background-color: black;
+}

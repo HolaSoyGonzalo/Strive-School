@@ -1,0 +1,45 @@
+
+.section-ablum-review {
+  margin-top: 1rem;
+}
+h2 {
+  margin-bottom: 1rem;
+}
+img {
+  height: 100%;
+}
+.imageCover {
+  background-color: green;
+  background-image: url("../imgs/album.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+}
+
+body {
+  background-color:#9dc7f1a8;
+}
+
+.jumbotron{
+  margin-top: 3em;
+}
+#fku {
+  transition: all 0.25s ease;
+}
+#fku:hover {
+  color: transparent;
+}
+.row {
+}
+
+.imageCover {
+  background-color: green;
+  background-image: url("../imgs/album.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+}
